@@ -1,41 +1,38 @@
- set linenumbers
- 2
- 3 ### all *js files  ( e.g. Firefox user.js, prefs.js )
- 4
- 5 ## Old version
- 6
- 7 #syntax "jsfiles" "(\.|/|)js$"
- 8 #color green "//.*$" start="\/\*" end="\*\/"
- 9 #color blue "'(\\.|[^'])*'"
-10 #color red ""(\\.|[^\"])*""
-11 #color brightgreen "\<(true)\>"
-12 #color brightred "\<(false)\>" "http\:\/\/.*$"
-13 #color brightmagenta "[0-9](\\.|[^\"])*)"
-14
-15 ## New updated taken from http://wiki.linuxhelp.net/index.php/Nano_Syntax_Highlighting
-16
-17 syntax "JavaScript" "\.(js)$"
-18 ## Default
-19 color white "^.+$"
-20 ## Decimal, cotal and hexadecimal numbers
-21 color yellow "\<[-+]?([1-9][0-9]*|0[0-7]*|0x[0-9a-fA-F]+)([uU][lL]?|[lL][uU]?)?\>"
-22 ## Floating point number with at least one digit before decimal point
-23 color yellow "\<[-+]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)([EePp][+-]?[0-9]+)?[fFlL]?"
-24 color yellow "\<[-+]?([0-9]+[EePp][+-]?[0-9]+)[fFlL]?"
-25 ## Keywords
-26 color green "\<(break|case|catch|continue|default|delete|do|else|finally)\>"
-27 color green "\<(for|function|if|in|instanceof|new|null|return|switch)\>"
-28 color green "\<(switch|this|throw|try|typeof|undefined|var|void|while|with)\>"
-29 ## Type specifiers
-30 color red "\<(Array|Boolean|Date|Enumerator|Error|Function|Math)\>"
-31 color red "\<(Number|Object|RegExp|String)\>"
-32 color red "\<(true|false)\>"
-33 ## String
-34 color brightyellow "L?\"(\\"|[^"])*\""
-35 color brightyellow "L?'(\'|[^'])*'"
-36 ## Escapes
-37 color red "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
-38 ## Comments
-39 color magenta start="/\*" end="\*/"
-40 color magenta "//.*$"
+set linenumbers
 
+### all *js files  ( e.g. Firefox user.js, prefs.js )
+## Old version
+#syntax "jsfiles" "(\.|/|)js$"
+#color green "//.*$" start="\/\*" end="\*\/"
+#color blue "'(\\.|[^'])*'"
+#color red ""(\\.|[^\"])*""
+#color brightgreen "\<(true)\>"
+#color brightred "\<(false)\>" "http\:\/\/.*$"
+#color brightmagenta "[0-9](\\.|[^\"])*)"
+
+## New updated taken from http://wiki.linuxhelp.net/index.php/Nano_Syntax_Highlighting
+
+syntax "JavaScript" "\.(js)$"
+## Default
+color white "^.+$"
+## Decimal, cotal and hexadecimal numbers
+color yellow "\<[-+]?([1-9][0-9]*|0[0-7]*|0x[0-9a-fA-F]+)([uU][lL]?|[lL][uU]?)?\>"
+## Floating point number with at least one digit before decimal point
+color yellow "\<[-+]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)([EePp][+-]?[0-9]+)?[fFlL]?"
+color yellow "\<[-+]?([0-9]+[EePp][+-]?[0-9]+)[fFlL]?"
+## Keywords
+color green "\<(break|case|catch|continue|default|delete|do|else|finally)\>"
+color green "\<(for|function|if|in|instanceof|new|null|return|switch)\>"
+color green "\<(switch|this|throw|try|typeof|undefined|var|void|while|with)\>"
+## Type specifiers
+color red "\<(Array|Boolean|Date|Enumerator|Error|Function|Math)\>"
+color red "\<(Number|Object|RegExp|String)\>"
+color red "\<(true|false)\>"
+## String
+color brightyellow "L?\"(\\"|[^"])*\""
+color brightyellow "L?'(\'|[^'])*'"
+## Escapes
+color red "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
+## Comments
+color magenta start="/\*" end="\*/"
+color magenta "//.*$"
