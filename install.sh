@@ -11,3 +11,5 @@ cd .nano/
 ./configure
 make
 sudo make install
+
+touch ~/.nanorc
